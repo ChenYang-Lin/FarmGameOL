@@ -1,0 +1,362 @@
+.game-content {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  /* background-color: red; */
+  box-sizing: border-box;
+}
+
+.cover,
+.cover2,
+.cover3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+}
+
+.cover2 {
+  z-index: 10;
+}
+
+.cover3 {
+  z-index: 15;
+}
+
+.game-container {
+  width: 770px;
+}
+
+.ui-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fffcff;
+  z-index: 2;
+}
+
+.ui-element {
+  margin: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: gray;
+  background-size: 60px;
+  cursor: pointer;
+}
+.selected-item {
+  border-style: solid;
+  border-color: red;
+}
+.water {
+  background-image: url("../images/ui/waterCursor.png");
+}
+
+.seed {
+  background-image: url("../images/ui/potatoSeed.png");
+}
+
+.spade {
+  background-image: url("../images/ui/spade.png");
+}
+
+.collect {
+  background-image: url("../images/ui/collect.png");
+}
+
+.cancel {
+  background-image: url("../images/ui/clear.png");
+}
+
+.select-seeds {
+  height: 50px;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  font-size: 150%;
+  border: none;
+  box-shadow: 0px 0px 5px black;
+}
+
+/* user-info-container */
+.user-info-container {
+  position: absolute;
+  top: 2%;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  height: 15%;
+  width: 100%;
+  /* background-color: white; */
+}
+
+.exp-gold {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.exp-curr {
+  position: absolute;
+  top: 5%;
+  line-height: 100%;
+  vertical-align: center;
+  margin-left: 5%;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 200%;
+}
+
+.gold {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  left: 5%;
+  top: 70%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.gold-icon {
+  height: 100%;
+  width: 10%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/ui/gold.png");
+}
+
+.gold-text {
+  /* height: 100%; */
+  /* display: inline; */
+  width: 60%;
+  line-height: 100%;
+  vertical-align: center;
+  margin-left: 5%;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 200%;
+}
+
+.exp {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  left: 0%;
+  top: 25%;
+}
+
+.exp-name {
+  position: absolute;
+  height: 60%;
+  width: 17%;
+  left: 5%;
+  top: 30%;
+  color: white;
+  text-align: center;
+  background-color: black;
+  z-index: 5;
+  transform: skewX(-10deg);
+}
+
+.exp-black {
+  background-color: black;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 80%;
+  height: 30%;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.exp-green {
+  background-color: green;
+  position: absolute;
+  top: 35%;
+  left: 21%;
+  width: 100%;
+  /* width: 0%; */
+  height: 20%;
+  border-radius: 10px;
+  z-index: 3;
+}
+
+/* shop inventory */
+.other-ui {
+  /* background-color: gray; */
+  position: absolute;
+  height: 70%;
+  width: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.user-ui {
+  height: 100%;
+  margin-right: 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inventory,
+.shop {
+  height: 100%;
+  width: auto;
+  background-size: 100%;
+  background-position: center;
+  cursor: pointer;
+}
+
+.inventory {
+  /* background-image: url("../images/ui/bag.png"); */
+}
+
+.shop {
+  border: 0;
+  /* background-image: url("../images/ui/shop.png"); */
+}
+
+/* farm container */
+.farm-container {
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+.square-box {
+  width: 100px;
+  padding: 10px;
+  height: 100px;
+  /* cursor: pointer; */
+  box-sizing: border-box;
+  background-color: rgb(87, 69, 64);
+  /* background-color: rgb(92, 31, 16); */
+  /* background-image: url("./images/potato/potato.png"); */
+  margin: 5px;
+  box-shadow: 0 0 3px #cbd4c2;
+  background-size: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.plant {
+  margin-top: 20%;
+  margin-left: 10%;
+  width: 80%;
+  height: 80%;
+  /* margin: 20px 15px 10px 15px; */
+  /* background-image: url("./images/potato/potato1.png"); */
+  background-size: 100%;
+  pointer-events: none;
+}
+
+.time-top {
+  top: 15%;
+  width: 80px;
+  height: 10px;
+  position: absolute;
+  background-color: black;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.time-bot {
+  top: 15%;
+  margin: 2px;
+  width: 0px;
+  height: 6px;
+  position: absolute;
+  background-color: green;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.plant-ready {
+  border-style: solid;
+  border-color: orange;
+}
+
+/* Message Box */
+.message-container {
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  font-family: Arial;
+  border: 3px solid black;
+  border-radius: 50px;
+  position: absolute;
+  /* display: block; */
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(226, 224, 224);
+  transform: translate(-50%, -50%);
+  z-index: 16;
+}
+
+.message-header {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  width: 40%;
+  text-align: center;
+  font-size: 50px;
+}
+
+.message-body {
+  position: absolute;
+  text-align: center;
+  font-size: 25px;
+  top: 30%;
+  width: 80%;
+  left: 10%;
+}
+
+.message-btn {
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  width: 20%;
+  height: 10%;
+  border-radius: 20px;
+}
+
+.time-display {
+  position: absolute;
+  top: 1%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  color: white;
+  font-size: 70%;
+  display: block;
+}

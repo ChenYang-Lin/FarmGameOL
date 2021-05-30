@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css files -->
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/gameContent.css" />
+    <link rel="stylesheet" href="css/plant-seeds.css" />
+    <link rel="stylesheet" href="css/friendList.css" />
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Yangge</label>
+      <ul id="nav-btns">
+        <li class="logged-in logged-out"><a href="#" id="home">Home</a></li>
+        <li class="logged-in"><a href="#" id="profile">Profile</a></li>
+        <li class="logged-in"><a href="#" id="friends">Friends</a></li>
+        <li class="logged-in"><a href="#" id="logout">Logout</a></li>
+        <li class="logged-out"><a href="#" id="signup">Signup</a></li>
+        <li class="logged-out"><a href="#" id="login">Login</a></li>
+      </ul>
+    </nav>
+
+    <!-- Friend List Modal -->
+    <div class="friends-container">
+      <h1>Friends</h1>
+      <ul class="friend-list">
+        <li class="friend-element">
+          <div class="friend-name"></div>
+          
+        </li>
+      </ul>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="center signup-modal">
+      <h1>Signup</h1>
+      <form id="signup-form">
+        <div class="txt_field">
+          <input type="text" id="signup-userName" required />
+          <span></span>
+          <label>User Name</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" id="signup-email" required />
+          <span></span>
+          <label>Email address</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="signup-password" required />
+          <span></span>
+          <label>Choose password</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="signup-confirm-password" required />
+          <span></span>
+          <label>Confirm password</label>
+        </div>
+        <input type="submit" value="Signup" />
+      </form>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="center login-modal">
+      <h1>Login</h1>
+      <form id="login-form">
+        <div class="txt_field">
+          <input type="text" id="login-email" required />
+          <span></span>
+          <label>Email address</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="login-password" required />
+          <span></span>
+          <label>Your password</label>
+        </div>
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" value="Login" />
+        <div class="signup_link">Not a member? <a href="#">Signup</a></div>
+      </form>
+    </div>
+
+    <div class="cover"></div>
+    <div class="cover2"></div>
+    <div class="cover3"></div>
+
+    <!-- game content -->
+    <div class="game-content">
+      <div class="account-details"></div>
+
+      <div class="game-container">
+        <div class="message-container">
+          <div class="message-header">Alert</div>
+          <div class="message-body">message body</div>
+          <button class="message-btn">Ok</button>
+        </div>
+
+        <div class="general-container choose-amount-container">
+          <div class="general-header">Choose Amount</div>
+          <div class="general-body choose-amount-body">
+            <button class="subtract">-</button>
+            <div class="curr-amount">1</div>
+            <button class="add">+</button>
+          </div>
+          <div class="money">Your Money: $100</div>
+          <div class="total-price">Total: $10</div>
+          <div class="general-btns">
+            <button class="btn cancel-btn amount-cancel-btn">Cancel</button>
+            <button class="btn select-btn amount-select-btn">Confirm</button>
+          </div>
+        </div>
+
+        <div class="bag-container general-container">
+          <div class="bag-header general-header">Bag</div>
+          <div class="bag-body general-body">
+            <div class="vege-container general-list-container">
+              <!-- <div class="vege-element-container">
+                <div class="element-image"></div>
+                <div class="element-info">
+                  <div class="element-name">Potato Seeds</div>
+                  <div class="element-price">$2</div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="seeds-btns general-btns">
+            <button class="btn cancel-btn bag-cancel-btn">Cancel</button>
+            <button class="btn select-btn bag-select-btn">Sell</button>
+          </div>
+        </div>
+
+        <div class="store-container general-container">
+          <div class="store-header general-header">Store</div>
+          <div class="store-body general-body">
+            <div class="merchandise-container general-list-container">
+              <!-- <div class="merchandise-element-container">
+                <div class="element-image"></div>
+                <div class="element-info">
+                  <div class="element-name">Potato Seeds</div>
+                  <div class="element-price">$2</div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="seeds-btns general-btns">
+            <button class="btn cancel-btn store-cancel-btn">Cancel</button>
+            <button class="btn select-btn store-select-btn">Select</button>
+          </div>
+        </div>
+
+        <div class="plant-seeds-container general-container">
+          <div class="seeds-header general-header">Plant Seeds</div>
+          <div class="seeds-body general-body">
+            <div class="seeds-container general-list-container">
+              <!-- <div class="seed-element-container">
+                <div class="element-image"></div>
+                <div class="element-info">
+                  <div class="element-name">potato seeds</div>
+                  <div class="element-amount">X3</div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="seeds-btns general-btns">
+            <button class="btn cancel-btn inven-cancel-btn">Cancel</button>
+            <button class="btn select-btn inven-select-btn">Select</button>
+          </div>
+        </div>
+
+        <div class="user-info-container">
+          <div class="exp-gold">
+            <div class="exp-curr">Level: 1</div>
+            <div class="exp">
+              <div class="exp-name">
+                EXP: <br />
+                <div class="exp-text">6/6</div>
+              </div>
+              <div class="exp-green"></div>
+              <div class="exp-black"></div>
+            </div>
+            <div class="gold">
+              <i class="gold-icon"></i>
+              <div class="gold-text">100</div>
+            </div>
+          </div>
+
+          <div class="other-ui">
+            <div class="user-ui">
+              <img class="shop" src="../images/ui/shop.png"></img>
+            </div>
+            <div class="user-ui">
+              <img class="inventory" src="../images/ui/bag.png"></img>
+            </div>
+          </div>
+        </div>
+        <div class="farm-container"></div>
+        <div class="ui-container">
+          <div class="ui-element cancel"></div>
+          <div class="ui-element water"></div>
+          <div class="ui-element spade"></div>
+          <div class="ui-element collect"></div>
+          <div class="ui-element seed"></div>
+          <div class="curr-seed-change">
+            <div class="curr-seed-amount">Potato Seeds: 5</div>
+            <button class="select-seeds">Change Seed</button>
+          </div>
+          <div class="ui-element clear"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- javascript file -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCxMZAJ7zQQJvp9_rYNdxVsRTfzSQmymN4",
+        authDomain: "farm-game-c0140.firebaseapp.com",
+        projectId: "farm-game-c0140",
+        // storageBucket: "farm-game-c0140.appspot.com",
+        // messagingSenderId: "801264568553",
+        appId: "1:801264568553:web:705121887da2648d9d4878",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      // Make auth and firestore references
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+    </script>
+    <!-- <script type="module" src="firebase.js"></script> -->
+    <script src="index.js"></script>
+    <script src="/components/auth/auth.js"></script>
+
+    <!-- Game -->
+    <script src="./components/game/data/storage.js"></script>
+    <script src="./components/game/data/gameDefaultData.js"></script>
+    <script src="./components/game/data/growingImages.js"></script>
+    <script src="./components/game/data/load.js"></script>
+    <script src="./components/game/data/render.js"></script>
+    <script src="./components/game/data/rewards.js"></script>
+
+    <script src="./components/game/update/updateGrowingData.js"></script>
+    <script src="./components/game/update/updateGame.js"></script>
+
+    <script src="/components/game/inventory/inventory.js"></script>
+    <script src="/components/game/inventory/store.js"></script>
+    <script src="/components/game/inventory/bag.js"></script>
+    <script src="/components/game/inventory/amountWindow.js"></script>
+
+    <script src="./components/game/controls/updateSquare.js"></script>
+    <script src="./components/game/controls/updateCursor.js"></script>
+    <script src="./components/game/controls/plant.js"></script>
+    <script src="./components/game/controls/collect.js"></script>
+    <script src="./components/game/controls/water.js"></script>
+    <script src="./components/game/controls/spade.js"></script>
+
+    <script src="/components/game/initGame.js"></script>
+  </body>
+</html>
