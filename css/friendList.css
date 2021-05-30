@@ -1,0 +1,70 @@
+.friends-container {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  z-index: 50;
+  border-radius: 20px;
+}
+
+.friends-container h1 {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid black;
+}
+
+.friend-list {
+  /* background-color: red; */
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+  height: 65%;
+  overflow-y: scroll;
+}
+
+.friend-element {
+  height: 80px;
+  background-color: rgb(189, 189, 189);
+  margin: 10px 30px;
+  border-radius: 3px;
+  display: flex;
+}
+
+.friend-name-container {
+  background-color: black;
+  width: 30%;
+  color: white;
+  text-align: center;
+  position: relative;
+  font-size: 200%;
+}
+.friend-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.friend-btns {
+  position: absolute;
+  bottom: 3%;
+  width: 80%;
+  left: 10%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.close-friend-btn,
+.add-friend-btn {
+  width: 30%;
+  border-radius: 30px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 200%;
+  height: 100%;
+}

@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   background: linear-gradient(120deg, rgb(25, 116, 219), cyan);
+  position: relative;
 }
 
 nav {
@@ -113,9 +114,4 @@ a:hover {
   #check:checked ~ ul {
     left: 0;
   }
-}
-
-/* Friend list */
-.friends-container {
-  display: none;
 }
