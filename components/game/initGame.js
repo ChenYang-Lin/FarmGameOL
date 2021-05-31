@@ -22,6 +22,7 @@ const goldText = document.querySelector(".gold-text");
 const cover = document.querySelector(".cover");
 const cover2 = document.querySelector(".cover2");
 const cover3 = document.querySelector(".cover3");
+const cover4 = document.querySelector(".cover4");
 const timeProgressBar = document.querySelector(".time-bot");
 
 // Event Listeners
@@ -63,9 +64,9 @@ function alertWindow(text) {
 }
 
 // prevent scroll
-document.ontouchmove = function (event) {
-  event.preventDefault();
-};
+// document.ontouchmove = function (event) {
+//   event.preventDefault();
+// };
 
 //
 let user;
@@ -77,7 +78,7 @@ let InfoUserData;
 let InfoStore;
 function setupGame(u) {
   user = u;
-  console.log(user);
+  // console.log(user);
   gameContent.style.display = "block";
   signupModal.style.display = "none";
   loginModal.style.display = "none";

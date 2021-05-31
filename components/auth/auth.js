@@ -5,12 +5,20 @@ auth.onAuthStateChanged((user) => {
     setupUI(user);
     setupGame(user);
     // getUserData()
-    db.collection("users")
-      .doc(user.uid)
-      .get()
-      .then((doc) => {
-        // console.log("doc: ", doc.data());
-      });
+    // db.collection("users")
+    //   .doc(user.uid)
+    //   .get()
+    //   .then((doc) => {
+    //     // console.log("doc: ", doc.data());
+    //   });
+    db.collection("allUsers").onSnapshot(
+      (snapshot) => {
+        setupAllUsers(snapshot.docs);
+      },
+      (error) => {
+        console.log(error.message);
+      }
+    );
   } else {
     console.log("user logged out");
     loginModal.style.display = "block";
@@ -30,6 +38,8 @@ signupForm.addEventListener("submit", (e) => {
   const passwordConfirm = signupForm["signup-confirm-password"].value;
   const userName = signupForm["signup-userName"].value;
 
+  let id;
+
   // check if password equal
   if (password !== passwordConfirm) {
     alert("password not equal!");
@@ -40,12 +50,17 @@ signupForm.addEventListener("submit", (e) => {
   auth
     .createUserWithEmailAndPassword(email, password)
     .then((cred) => {
+      id = cred.user.uid;
       return db
         .collection("users")
         .doc(cred.user.uid)
         .set(initializeUserData(cred.user.uid, userName));
     })
     .then(() => {
+      db.collection("allUsers").add({
+        userID: id,
+        userName: userName,
+      });
       signupModal.style.display = "none";
       signupForm.reset();
     })

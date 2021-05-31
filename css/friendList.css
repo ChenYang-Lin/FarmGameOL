@@ -1,12 +1,13 @@
-.friends-container {
+.friend-box {
   position: absolute;
   top: 10%;
   left: 10%;
   width: 80%;
   height: 80%;
-  background-color: white;
+  background-color: rgb(178, 250, 95);
   z-index: 50;
   border-radius: 20px;
+  display: none;
 }
 
 .friends-container h1 {
@@ -15,7 +16,7 @@
   border-bottom: 2px solid black;
 }
 
-.friend-list {
+.friend-list-box {
   /* background-color: red; */
   width: 90%;
   margin-left: 5%;
@@ -24,30 +25,69 @@
   overflow-y: scroll;
 }
 
-.friend-element {
+.friend-element-box {
   height: 80px;
-  background-color: rgb(189, 189, 189);
+  background-color: white;
   margin: 10px 30px;
-  border-radius: 3px;
+  border-radius: 10px;
   display: flex;
 }
 
-.friend-name-container {
-  background-color: black;
-  width: 30%;
-  color: white;
+.friend-name-container-box {
+  background-color: cyan;
+  border-radius: 10px;
+  width: 40%;
+  color: black;
   text-align: center;
   position: relative;
   font-size: 200%;
 }
-.friend-name {
+.friend-name-box {
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+}
+.friend-id-box {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40%;
+  color: blue;
 }
 
-.friend-btns {
+.action-btns-box {
+  width: 60%;
+  margin-left: 5%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.goto-farm-btn,
+.delete-friend-btn,
+.add-user-btn {
+  width: 30%;
+  height: 70%;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  font-size: 200%;
+  box-shadow: 0 0 2px 2px black;
+  background-color: blue;
+  margin-right: 5%;
+}
+
+.goto-farm-btn {
+  background-color: green;
+}
+.delete-friend-btn {
+  background-color: red;
+}
+
+.friend-btns-box {
   position: absolute;
   bottom: 3%;
   width: 80%;
@@ -58,8 +98,7 @@
   align-items: center;
 }
 
-.close-friend-btn,
-.add-friend-btn {
+.friend-footer-btns {
   width: 30%;
   border-radius: 30px;
   border: none;
@@ -67,4 +106,16 @@
   color: white;
   font-size: 200%;
   height: 100%;
+  cursor: pointer;
+}
+
+/* Friend box */
+.users-container {
+  display: none;
+}
+
+.users-container h1 {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid black;
 }

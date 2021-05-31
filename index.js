@@ -19,7 +19,8 @@ navBtns.addEventListener("click", (e) => {
       console.log("clicked: log out");
       break;
     case "friends":
-      console.log("open friends box");
+      // console.log("open friends box");
+      openFriends();
       break;
     case "signup":
       loginModal.style.display = "none";
