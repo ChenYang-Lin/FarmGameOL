@@ -37,3 +37,9 @@ function saveInfoBag() {
     InfoBag: InfoBag,
   });
 }
+
+function saveInfoFriendList() {
+  db.collection("users").doc(user.uid).update({
+    InfoFriendList: InfoFriendList,
+  });
+}

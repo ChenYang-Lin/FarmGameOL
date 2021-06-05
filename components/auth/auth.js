@@ -13,7 +13,7 @@ auth.onAuthStateChanged((user) => {
     //   });
     db.collection("allUsers").onSnapshot(
       (snapshot) => {
-        setupAllUsers(snapshot.docs);
+        displayAllUsers(snapshot.docs);
       },
       (error) => {
         console.log(error.message);

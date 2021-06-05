@@ -247,12 +247,8 @@ function initializeUserData(uid, uName) {
 
   // FriendList
   let InfoFriendList;
-  InfoFriendList = [
-    {
-      friendName: "OyanggeO",
-      friendID: "EZ6x10vnVqY1JQqOM4KUmevV1b02",
-    },
-  ];
+  InfoFriendList = [];
+  FarmDatabase.InfoFriendList = InfoFriendList;
 
   // InfoUserData
   let InfoUserData;

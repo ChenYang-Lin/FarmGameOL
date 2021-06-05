@@ -76,6 +76,7 @@ let InfoFarmSquares;
 let InfoSeedInventory;
 let InfoUserData;
 let InfoStore;
+let InfoFriendList;
 function setupGame(u) {
   user = u;
   // console.log(user);
@@ -98,6 +99,7 @@ function setupGame(u) {
         InfoFarmSquares = doc.data().InfoFarmSquares;
         InfoSeedInventory = doc.data().InfoSeedInventory;
         InfoUserData = doc.data().InfoUserData;
+        InfoFriendList = doc.data().InfoFriendList;
         // console.log(InfoUserData);
       })
       .then(() => {
